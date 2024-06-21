@@ -9,5 +9,5 @@ export default function Manifiesto() {
         earum nisi.
       </p>
     </main>
-  );
+  )
 }

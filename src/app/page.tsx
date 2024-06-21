@@ -3,5 +3,5 @@ export default function HomePage() {
     <>
       <h1>Fundación Eritis Sicut Dei</h1>
     </>
-  );
+  )
 }

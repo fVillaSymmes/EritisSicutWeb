@@ -8,5 +8,5 @@ export default function Contacto() {
         <li>Javier Sandoval</li>
       </ul>
     </main>
-  );
+  )
 }
