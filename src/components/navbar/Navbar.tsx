@@ -1,11 +1,11 @@
-import { NavbarBurgerMenu } from "../navbarBurguerMenu/NavbarBurguerMenu";
-import { NavbarMenuItems } from "../navbarMenuItems/NavbarMenuItems";
+import { NavbarBurgerMenu } from '../navbarBurguerMenu/NavbarBurguerMenu'
+import { NavbarMenuItems } from '../navbarMenuItems/NavbarMenuItems'
 
 const navItems = [
-  { text: "Contacto", url: "/contacto" },
-  { text: "Manifiesto", url: "/manifiesto" },
-  { text: "Mision-Vision", url: "/mision-vision" },
-];
+  { text: 'Contacto', url: '/contacto' },
+  { text: 'Manifiesto', url: '/manifiesto' },
+  { text: 'Mision-Vision', url: '/mision-vision' },
+]
 
 export const Navbar = () => {
   return (
@@ -24,5 +24,5 @@ export const Navbar = () => {
         </NavbarBurgerMenu>
       </div>
     </nav>
-  );
-};
+  )
+}

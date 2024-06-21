@@ -1,16 +1,16 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 
 export const NavbarBurgerMenu = ({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   function toggleBurgerMenu() {
-    setIsOpen((open) => !open);
+    setIsOpen((open) => !open)
   }
 
   return (
@@ -40,7 +40,7 @@ export const NavbarBurgerMenu = ({
       </div>
 
       <div
-        className={`w-full md:block md:w-auto ${isOpen ? "" : "hidden"}`}
+        className={`w-full md:block md:w-auto ${isOpen ? '' : 'hidden'}`}
         id="mobile-menu"
       >
         <ul className="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium">
@@ -48,5 +48,5 @@ export const NavbarBurgerMenu = ({
         </ul>
       </div>
     </>
-  );
-};
+  )
+}

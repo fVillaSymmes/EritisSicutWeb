@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 interface Props {
-  text: string;
-  url: string;
+  text: string
+  url: string
 }
 
 export const NavbarMenuItems = ({ text, url }: Props) => {
@@ -17,5 +17,5 @@ export const NavbarMenuItems = ({ text, url }: Props) => {
         </Link>
       </li>
     </>
-  );
-};
+  )
+}

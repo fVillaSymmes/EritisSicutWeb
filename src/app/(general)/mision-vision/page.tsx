@@ -19,5 +19,5 @@ export default function MisionVision() {
         </li>
       </ul>
     </main>
-  );
+  )
 }
