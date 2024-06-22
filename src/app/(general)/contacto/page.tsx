@@ -22,6 +22,7 @@ export default function Contacto() {
               placeholder='John Doe'
               required
               className='w-full rounded-md border px-3 py-2 focus:border-blue-500 focus:outline-none'
+              style={{ color: 'black' }}
             />
           </div>
           <div className='mb-4'>
@@ -38,6 +39,7 @@ export default function Contacto() {
               placeholder='john@example.com'
               required
               className='w-full rounded-md border px-3 py-2 focus:border-blue-500 focus:outline-none'
+              style={{ color: 'black' }}
             />
           </div>
           <div className='mb-6'>
@@ -53,6 +55,7 @@ export default function Contacto() {
               rows={4}
               placeholder='How can we help you?'
               className='w-full rounded-md border px-3 py-2 focus:border-blue-500 focus:outline-none'
+              style={{ color: 'black' }}
             ></textarea>
           </div>
           <button
