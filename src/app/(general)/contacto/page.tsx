@@ -1,6 +1,6 @@
 export default function Contacto() {
   return (
-    <main className='flex flex-col items-center pt-8'>
+    <main className='flex flex-col items-center pt-8 bg-custom'>
       <h1 className='text-6xl'>Contacto</h1>
       <div className='md:m mx-auto my-6 max-w-md rounded-md bg-slate-800 p-4 shadow-md'>
         <h2 className='mb-6 text-2xl font-semibold'>Get in Touch</h2>

@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.bg-custom {
+  @apply bg-[#2c2727];
+}
