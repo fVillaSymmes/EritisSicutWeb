@@ -20,7 +20,7 @@ const navItems = [
 
 export const Navbar = () => {
   return (
-    <nav className='rounded border border-gray-300 px-2 py-2.5 shadow sm:px-4 dark:border-gray-700 bg-neutral-200'>
+    <nav className='rounded  px-2 py-2.5 shadow sm:px-4 dark:border-gray-700 bg-custom'>
       <div className='container relative mx-4 flex flex-wrap items-center justify-between'>
         <Image
         alt='Logo Eritis Sicut Dei'
@@ -31,13 +31,13 @@ export const Navbar = () => {
         />
         <div className='flex absolute ml-10 items-auto'>
       <a href="/" className='flex items-auto'>
-        <span className='self-center whitespace-nowrap text-ms font-bodoni-72 text-opacity-2 text-black ml-5'>
+        <span className='self-center whitespace-nowrap text-ms font-bodoni-72 text-opacity-2 text-white ml-5'>
           Eritis
           Sicut
           Dei
         </span>
       </a>
-    </div>|
+    </div>
 
         <NavbarBurgerMenu>
           {navItems.map((navItem) => (

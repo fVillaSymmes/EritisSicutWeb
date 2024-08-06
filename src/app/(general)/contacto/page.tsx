@@ -1,68 +1,27 @@
 export default function Contacto() {
   return (
-    <main className='flex flex-col items-center pt-8 bg-custom'>
-      <h1 className='text-6xl'>Contacto</h1>
-      <div className='md:m mx-auto my-6 max-w-md rounded-md bg-slate-800 p-4 shadow-md'>
-        <h2 className='mb-6 text-2xl font-semibold'>Get in Touch</h2>
-        <form
-          action='#'
-          method='POST'
-        >
-          <div className='mb-4'>
-            <label
-              htmlFor='name'
-              className='mb-2 block text-sm font-bold text-gray-700'
-            >
-              Your Name
-            </label>
-            <input
-              type='text'
-              id='name'
-              name='name'
-              placeholder='John Doe'
-              required
-              className='w-full rounded-md border px-3 py-2 text-black focus:border-blue-500 focus:outline-none'
-            />
+    <main className=''>
+      <section className="bg-white bg-custom ">
+  <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contactanos!</h2>
+      <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"> Si eres donante, o quieres presentar un proyecto, no dudes en contactarnos!</p>
+      <form action="#" className="space-y-8">
+          <div>
+              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
+              <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="johndoe@gmail.com" required/>
           </div>
-          <div className='mb-4'>
-            <label
-              htmlFor='email'
-              className='mb-2 block text-sm font-bold text-gray-700'
-            >
-              Your Email
-            </label>
-            <input
-              type='email'
-              id='email'
-              name='email'
-              placeholder='john@example.com'
-              required
-              className='w-full rounded-md border px-3 py-2 text-black focus:border-blue-500 focus:outline-none'
-            />
+          <div>
+              <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Motivo</label>
+              <input type="text" id="subject" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Hazla corta" required/>
           </div>
-          <div className='mb-6'>
-            <label
-              htmlFor='message'
-              className='mb-2 block text-sm font-bold text-gray-700'
-            >
-              Your Message
-            </label>
-            <textarea
-              id='message'
-              name='message'
-              rows={4}
-              placeholder='How can we help you?'
-              className='w-full rounded-md border px-3 py-2 text-black focus:border-blue-500 focus:outline-none'
-            ></textarea>
+          <div className="sm:col-span-2">
+              <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mensaje</label>
+              <textarea id="message" rows= {6} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Deja una descripción"></textarea>
           </div>
-          <button
-            type='submit'
-            className='focus:shadow-outline-blue rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none'
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+          <button type="submit" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg  sm:w-fit hover:bg-slate-800  focus:outline-none bg-black ">Enviar</button>
+      </form>
+  </div>
+</section>
     </main>
   )
 }
