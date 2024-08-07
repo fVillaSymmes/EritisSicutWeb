@@ -9,7 +9,7 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      negro: colors.black,
+      black: colors.black,
       'ESD-Black': '#181818',
     },
     extend: {

@@ -31,7 +31,7 @@ export default function HomePage() {
 
       <section
         id='queHacemos'
-        className='bg-negro my-10 flex flex-col gap-6 py-12'
+        className='my-10 flex flex-col gap-6 bg-black py-12'
       >
         <article className='mx-auto flex gap-3 outline-dashed'>
           <p>
