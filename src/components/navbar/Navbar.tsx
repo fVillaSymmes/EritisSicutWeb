@@ -5,15 +5,19 @@ import { NavbarMenuItems } from '../navbarMenuItems/NavbarMenuItems'
 const navItems = [
   {
     text: 'Contacto',
-    url: '/contacto',
+    url: '#contacto',
   },
   {
     text: 'Manifiesto',
-    url: '/manifiesto',
+    url: '#manifiesto',
   },
   {
     text: 'Mision-Vision',
     url: '/mision-vision',
+  },
+  {
+    text: 'Transparencia',
+    url: '/transparencia',
   },
 ]
 
