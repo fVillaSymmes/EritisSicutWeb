@@ -22,13 +22,13 @@ export const Navbar = () => {
   return (
     <nav className='rounded  px-2 py-2.5 shadow sm:px-4 dark:border-gray-700 bg-custom'>
       <div className='container relative mx-4 flex flex-wrap items-center justify-between'>
-        <Image
+        {/* <Image
         alt='Logo Eritis Sicut Dei'
         src={LogoEritisSicutDei}
         width={50}
         height={50} 
         className='rounded-full mr-0'
-        />
+        /> */}
         <div className='flex absolute ml-10 items-auto'>
       <a href="/" className='flex items-auto'>
         <span className='self-center whitespace-nowrap text-ms font-bodoni-72 text-opacity-2 text-white ml-5'>
