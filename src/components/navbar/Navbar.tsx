@@ -6,7 +6,8 @@ import LogoEritisSicutDei from '/public/img/logoEritisSicutDei.jpeg'
 const navItems = [
   {
     text: 'Contacto',
-    url: '/contacto',
+    url: '#contacto'
+    
   },
   {
     text: 'Manifiesto',
