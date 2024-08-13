@@ -54,6 +54,15 @@ export default function HomePage() {
             reprehenderit voluptates quaerat ipsa explicabo corporis.
           </p>
         </article>
+        <article className='mx-auto flex gap-3'>
+          <p className='border-e-2 px-3'>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+            blanditiis voluptatum eius ipsum laborum deleniti quo voluptas
+            magnam suscipit dolorum perspiciatis, tempore sapiente neque
+            reprehenderit voluptates quaerat ipsa explicabo corporis.
+          </p>
+          <p className='my-auto px-4'>TRANSPARENCIA</p>
+        </article>
       </section>
 
       <section
@@ -61,10 +70,10 @@ export default function HomePage() {
         id='contacto'
       >
         <article className='mx-auto max-w-screen-md px-4 py-8 lg:py-16'>
-          <h2 className='text-gray-900 dark:text-white mb-4 text-center text-4xl font-extrabold tracking-tight'>
+          <h2 className='mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white'>
             Contactanos!
           </h2>
-          <p className='text-gray-500 dark:text-gray-400 mb-8 text-center font-light sm:text-xl lg:mb-16'>
+          <p className='mb-8 text-center font-light text-gray-500 sm:text-xl lg:mb-16 dark:text-gray-400'>
             {' '}
             Si eres donante, o quieres presentar un proyecto, no dudes en
             contactarnos!
@@ -76,14 +85,14 @@ export default function HomePage() {
             <div>
               <label
                 htmlFor='email'
-                className='text-gray-900 dark:text-gray-300 mb-2 block text-sm font-medium'
+                className='mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300'
               >
                 Email
               </label>
               <input
                 type='email'
                 id='email'
-                className='bg-gray-50 border-gray-300 text-gray-900 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border p-2.5 text-sm shadow-sm'
+                className='focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                 placeholder='johndoe@gmail.com'
                 required
               />
@@ -91,14 +100,14 @@ export default function HomePage() {
             <div>
               <label
                 htmlFor='subject'
-                className='text-gray-900 dark:text-gray-300 mb-2 block text-sm font-medium'
+                className='mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300'
               >
                 Motivo
               </label>
               <input
                 type='text'
                 id='subject'
-                className='text-gray-900 bg-gray-50 border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border p-3 text-sm shadow-sm'
+                className='focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                 placeholder='Hazla corta'
                 required
               />
@@ -106,20 +115,20 @@ export default function HomePage() {
             <div className='sm:col-span-2'>
               <label
                 htmlFor='message'
-                className='text-gray-900 dark:text-gray-300 mb-2 block text-sm font-medium'
+                className='mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300'
               >
                 Mensaje
               </label>
               <textarea
                 id='message'
                 rows={6}
-                className='text-gray-900 bg-gray-50 border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border p-2.5 text-sm shadow-sm'
+                className='focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                 placeholder='Deja una descripción'
               ></textarea>
             </div>
             <button
               type='submit'
-              className='text-white hover:bg-slate-800 dark:bg-gray-700 rounded-lg px-5 py-3 text-center text-sm font-medium focus:outline-none sm:w-fit'
+              className='rounded-lg px-5 py-3 text-center text-sm font-medium text-white hover:bg-slate-800 focus:outline-none sm:w-fit dark:bg-gray-700'
             >
               Enviar
             </button>
