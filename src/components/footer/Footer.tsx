@@ -1,8 +1,18 @@
 export default function Footer() {
   return (
     <footer className='footer footer-center flex w-full justify-between bg-gray-900 p-4 text-white'>
-      <p className='my-auto'>Eritis Sicut Dei - 2024</p>
-      <a href='/'>
+      <a
+        href='#top'
+        className='my-auto'
+      >
+        Eritis Sicut Dei - 2024
+      </a>
+      <a
+        href='http://www.linkedin.com'
+        // Poner enlace a Linkedin de la fundación ESD
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           x='0px'

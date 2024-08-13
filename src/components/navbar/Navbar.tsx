@@ -13,11 +13,11 @@ const navItems = [
   },
   {
     text: 'Mision-Vision',
-    url: '/mision-vision',
+    url: '#misionVision',
   },
   {
     text: 'Transparencia',
-    url: '/transparencia',
+    url: '#transparencia',
   },
 ]
 

@@ -31,16 +31,19 @@ export default function HomePage() {
 
       <section
         id='queHacemos'
-        className='my-10 flex flex-col gap-6 bg-black py-12'
+        className='min-h my-10 flex flex-col gap-6 bg-black py-12'
       >
-        <article className='mx-auto flex gap-3'>
+        <article
+          className='mx-auto flex gap-3'
+          id='misionVision'
+        >
           <p className='border-e-2 px-3'>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
             blanditiis voluptatum eius ipsum laborum deleniti quo voluptas
             magnam suscipit dolorum perspiciatis, tempore sapiente neque
             reprehenderit voluptates quaerat ipsa explicabo corporis.
           </p>
-          <p className='my-auto px-4'>¿QUÉ HACEMOS?</p>
+          <p className='my-auto px-4'>MISIÓN - VISIÓN</p>
         </article>
         <article
           id='manifiesto'
@@ -54,7 +57,10 @@ export default function HomePage() {
             reprehenderit voluptates quaerat ipsa explicabo corporis.
           </p>
         </article>
-        <article className='mx-auto flex gap-3'>
+        <article
+          className='mx-auto flex gap-3'
+          id='transparencia'
+        >
           <p className='border-e-2 px-3'>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
             blanditiis voluptatum eius ipsum laborum deleniti quo voluptas
@@ -71,11 +77,10 @@ export default function HomePage() {
       >
         <article className='mx-auto max-w-screen-md px-4 py-8 lg:py-16'>
           <h2 className='mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white'>
-            Contactanos!
+            Contáctanos!
           </h2>
           <p className='mb-8 text-center font-light text-gray-500 sm:text-xl lg:mb-16 dark:text-gray-400'>
-            {' '}
-            Si eres donante, o quieres presentar un proyecto, no dudes en
+            Si deseas patrocinar o presentar un proyecto ¡no dudes en
             contactarnos!
           </p>
           <form
@@ -108,7 +113,7 @@ export default function HomePage() {
                 type='text'
                 id='subject'
                 className='focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
-                placeholder='Hazla corta'
+                placeholder='Asunto'
                 required
               />
             </div>
@@ -123,7 +128,7 @@ export default function HomePage() {
                 id='message'
                 rows={6}
                 className='focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
-                placeholder='Deja una descripción'
+                placeholder='Ingresa una descripción'
               ></textarea>
             </div>
             <button
