@@ -19,7 +19,7 @@ export const NavbarBurgerMenu = ({
         <button
           id='menu-toggle'
           type='button'
-          className='text-gray-500 2 ml-3 inline-flex items-center p-2 text-sm md:hidden'
+          className='ml-3 inline-flex items-center p-2 text-sm text-gray-500 md:hidden'
           onClick={toggleBurgerMenu}
         >
           <span className='sr-only'>Open main menu</span>
@@ -40,7 +40,7 @@ export const NavbarBurgerMenu = ({
       </div>
 
       <div
-        className={`absolute inset-x-0 top-10 w-full backdrop-blur-sm md:block md:w-auto ${isOpen ? '' : 'hidden'}`}
+        className={`inset-x-0 top-10 w-full backdrop-blur-sm md:block md:w-auto ${isOpen ? 'absolute' : 'hidden'}`}
         id='mobile-menu'
       >
         <ul className='mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium'>

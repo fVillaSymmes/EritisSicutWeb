@@ -29,7 +29,7 @@ export const Navbar = () => {
           href='/'
           className='flex items-center'
         >
-          <span className='text-white self-center whitespace-nowrap text-xl font-semibold'>
+          <span className='self-center whitespace-nowrap text-xl font-semibold text-white'>
             Eritis Sicut Dei
           </span>
         </Link>
