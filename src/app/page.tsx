@@ -1,32 +1,43 @@
 import Image from 'next/image'
-import LogoEritisSicutDei from '/public/img/logoEritisSicutDei.jpeg'
-import Link from 'next/link'
 
 export default function HomePage() {
   return (
     <main className='bg-ESD-Black'>
-      <section>
-        <Image
-          alt={'Logo de la fundación Eritis Sicut Dei'}
-          src={LogoEritisSicutDei}
-          className='w-full'
-          priority
-        />
-        <div className='flex flex-col gap-2'>
-          <h1 className='text-center text-3xl'>Fundación Eritis Sicut Dei</h1>
-          <p className='m-4'>
-            Ayudamos a gestar grandes ideas de la mano de aquellos que pueden
-            hacerlas posibles.
-          </p>
+      <section className='static overflow-hidden bg-black text-white'>
+        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex flex-col items-center justify-between py-12 lg:flex-row lg:py-24'>
+            <div className='mb-8 w-full text-center lg:mb-0 lg:w-1/2 lg:text-left'>
+              <h1 className='mb-4 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl'>
+                Empowering Cultural Projects
+              </h1>
+              <p className='mx-auto mb-8 max-w-lg text-xl sm:text-2xl lg:mx-0'>
+                Eritis Sicut Dei: Supporting and nurturing cultural initiatives
+                since 2014.
+              </p>
+              <div className='flex flex-col justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 lg:justify-start'>
+                <button className='bg-white text-black hover:bg-gray-200'>
+                  Our Projects
+                </button>
+                <button className='border-white text-white hover:bg-white hover:text-black'>
+                  Get Involved
+                </button>
+              </div>
+            </div>
+            <div className='flex w-full justify-center lg:w-1/2 lg:justify-end'>
+              <div className='relative h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96'>
+                <Image
+                  priority
+                  src='/img/logo_black.png'
+                  alt='Eritis Sicut Dei Logo'
+                  layout='fill'
+                  objectFit='contain'
+                  className='animate-float'
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className='my-5 text-center'>
-          <Link
-            href='#queHacemos'
-            className='border p-2'
-          >
-            Saber más
-          </Link>
-        </div>
+        <div className='bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900 to-transparent'></div>
       </section>
 
       <section
