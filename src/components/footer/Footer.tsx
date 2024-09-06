@@ -1,29 +1,81 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { Facebook, Twitter, Instagram } from 'lucide-react'
+
 export default function Footer() {
   return (
-    <footer className='footer footer-center flex w-full justify-between bg-gray-900 p-4 text-white'>
-      <a
-        href='#top'
-        className='my-auto'
-      >
-        Eritis Sicut Dei - 2024
-      </a>
-      <a
-        href='http://www.linkedin.com'
-        // Poner enlace a Linkedin de la fundación ESD
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          x='0px'
-          y='0px'
-          width='2rem'
-          height='auto'
-          viewBox='0 0 50 50'
-        >
-          <path d='M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z'></path>
-        </svg>
-      </a>
+    <footer className='bg-black text-white'>
+      <div className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8'>
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
+          <div className='flex flex-col items-center md:items-start'>
+            <Image
+              src='/img/logo_black.png'
+              alt='Eritis Sicut Dei Logo'
+              width={80}
+              height={80}
+            />
+            <p className='mt-2 text-sm'>
+              Apoyando proyectos culturales desde 2014
+            </p>
+          </div>
+          <div className='flex flex-col items-center md:items-start'>
+            <h3 className='mb-2 text-lg font-semibold'>Enlaces rápidos</h3>
+            <Link
+              href='/contacto'
+              className='hover:underline'
+            >
+              Contacto
+            </Link>
+            <Link
+              href='/manifiesto'
+              className='hover:underline'
+            >
+              Manifiesto
+            </Link>
+            <Link
+              href='/mision-vision'
+              className='hover:underline'
+            >
+              Misión-Visión
+            </Link>
+            <Link
+              href='/transparencia'
+              className='hover:underline'
+            >
+              Transparencia
+            </Link>
+          </div>
+          <div className='flex flex-col items-center md:items-start'>
+            <h3 className='mb-2 text-lg font-semibold'>Síguenos</h3>
+            <div className='flex space-x-4'>
+              <a
+                href='#'
+                className='hover:text-gray-400'
+              >
+                <Facebook />
+              </a>
+              <a
+                href='#'
+                className='hover:text-gray-400'
+              >
+                <Twitter />
+              </a>
+              <a
+                href='#'
+                className='hover:text-gray-400'
+              >
+                <Instagram />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className='mt-8 border-t border-gray-800 pt-8 text-center'>
+          <p className='text-sm'>
+            &copy; {new Date().getFullYear()} Eritis Sicut Dei. Todos los
+            derechos reservados.
+          </p>
+        </div>
+      </div>
     </footer>
   )
 }
