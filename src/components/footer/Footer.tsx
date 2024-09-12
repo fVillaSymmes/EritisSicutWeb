@@ -13,12 +13,14 @@ export default function Footer() {
               alt='Eritis Sicut Dei Logo'
               width={80}
               height={80}
+              className='sm:mx-auto'
             />
-            <p className='mt-2 text-sm'>
-              Apoyando proyectos culturales desde 2014
+            <p className='mx-12 mt-2 text-center text-sm'>
+              Fundación para el rescate y promoción del patrimonio cultural
+              Eritis Sicut Dei
             </p>
           </div>
-          <div className='flex flex-col items-center md:items-start'>
+          <div className='flex flex-col items-center'>
             <h3 className='mb-2 text-lg font-semibold'>Enlaces rápidos</h3>
             <Link
               href='/contacto'
@@ -45,7 +47,7 @@ export default function Footer() {
               Transparencia
             </Link>
           </div>
-          <div className='flex flex-col items-center md:items-start'>
+          <div className='my-auto flex flex-col items-center'>
             <h3 className='mb-2 text-lg font-semibold'>Síguenos</h3>
             <div className='flex space-x-4'>
               <a
@@ -71,8 +73,7 @@ export default function Footer() {
         </div>
         <div className='mt-8 border-t border-gray-800 pt-8 text-center'>
           <p className='text-sm'>
-            &copy; {new Date().getFullYear()} Eritis Sicut Dei. Todos los
-            derechos reservados.
+            &copy; {new Date().getFullYear()} Eritis Sicut Dei
           </p>
         </div>
       </div>

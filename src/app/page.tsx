@@ -1,5 +1,5 @@
+import { AccordionContainer } from '@/components/accordionContainer/AccordionContainer'
 import ContactForm from '@/components/contactForm/contactForm'
-import { AccordionDemo } from '@/components/accordion/Accordion'
 import HeroSection from '@/components/heroSection/HeroSection'
 
 export default function HomePage() {
@@ -7,8 +7,8 @@ export default function HomePage() {
     <main className='bg-black'>
       <HeroSection />
 
-      <section className='mx-4 bg-black text-white'>
-        <AccordionDemo />
+      <section className='mx-4 bg-black text-white sm:mx-16'>
+        <AccordionContainer />
       </section>
 
       <ContactForm />
