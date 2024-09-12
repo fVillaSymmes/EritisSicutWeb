@@ -19,14 +19,7 @@ export default function HeroSection() {
                 size='lg'
                 className='bg-white text-black hover:bg-gray-200'
               >
-                Our Projects
-              </Button>
-              <Button
-                size='lg'
-                variant='outline'
-                className='border-white text-white hover:bg-white hover:text-black'
-              >
-                Get Involved
+                Saber más
               </Button>
             </div>
           </div>
