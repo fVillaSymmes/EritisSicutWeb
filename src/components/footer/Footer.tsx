@@ -15,12 +15,12 @@ export default function Footer() {
               height={80}
               className='sm:mx-auto'
             />
-            <p className='mx-12 mt-2 text-center text-sm'>
+            <p className='font-headings mx-12 mt-2 text-center text-sm'>
               Fundación para el rescate y promoción del patrimonio cultural
               Eritis Sicut Dei
             </p>
           </div>
-          <div className='flex flex-col items-center'>
+          <div className='font-body flex flex-col items-center'>
             <h3 className='mb-2 text-lg font-semibold'>Enlaces rápidos</h3>
             <Link
               href='/contacto'
@@ -48,7 +48,7 @@ export default function Footer() {
             </Link>
           </div>
           <div className='my-auto flex flex-col items-center'>
-            <h3 className='mb-2 text-lg font-semibold'>Síguenos</h3>
+            <h3 className='font-body mb-2 text-lg font-semibold'>Síguenos</h3>
             <div className='flex space-x-4'>
               <a
                 href='#'
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
         </div>
         <div className='mt-8 border-t border-gray-800 pt-8 text-center'>
-          <p className='text-sm'>
+          <p className='font-body text-sm'>
             &copy; {new Date().getFullYear()} Eritis Sicut Dei
           </p>
         </div>

@@ -7,10 +7,10 @@ export default function HeroSection() {
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col items-center justify-between py-12 lg:flex-row lg:py-24'>
           <div className='mb-8 w-full text-center lg:mb-0 lg:w-1/2 lg:text-left'>
-            <h1 className='mb-4 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl'>
+            <h1 className='font-headings mb-4 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl'>
               Encendiendo Iniciativas Culturales
             </h1>
-            <p className='mx-auto mb-8 max-w-lg text-xl sm:text-2xl lg:mx-0'>
+            <p className='font-body mx-auto mb-8 max-w-lg text-xl sm:text-2xl lg:mx-0'>
               Eritis Sicut Dei: Apoyando y nutriendo proyectos culturales desde
               2024
             </p>

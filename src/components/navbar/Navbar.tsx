@@ -37,7 +37,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className='rounded-md px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-800'
+                  className='font-body rounded-md px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-800'
                 >
                   {item.name}
                 </Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className='block rounded-md px-3 py-2 text-base font-medium transition duration-150 ease-in-out hover:bg-gray-800'
+                className='font-body block rounded-md px-3 py-2 text-base font-medium transition duration-150 ease-in-out hover:bg-gray-800'
               >
                 {item.name}
               </Link>

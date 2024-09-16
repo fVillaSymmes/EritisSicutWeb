@@ -17,10 +17,12 @@ export const AccordionSingle: React.FC<AccordionProps> = ({
 }) => {
   return (
     <AccordionItem value={itemValue}>
-      <AccordionTrigger className={`text-xl sm:text-2xl`}>
+      <AccordionTrigger className={`font-headings text-xl sm:text-2xl`}>
         {title}
       </AccordionTrigger>
-      <AccordionContent className='text-lg'>{corpus}</AccordionContent>
+      <AccordionContent className='font-body text-lg'>
+        {corpus}
+      </AccordionContent>
     </AccordionItem>
   )
 }
