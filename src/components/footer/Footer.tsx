@@ -15,40 +15,40 @@ export default function Footer() {
               height={80}
               className='sm:mx-auto'
             />
-            <p className='font-headings mx-12 mt-2 text-center text-sm'>
+            <p className='mx-12 mt-2 text-center font-headings text-sm'>
               Fundación para el rescate y promoción del patrimonio cultural
               Eritis Sicut Dei
             </p>
           </div>
-          <div className='font-body flex flex-col items-center'>
+          <div className='flex flex-col items-center font-body'>
             <h3 className='mb-2 text-lg font-semibold'>Enlaces rápidos</h3>
             <Link
-              href='/contacto'
+              href='#contacto'
               className='hover:underline'
             >
               Contacto
             </Link>
             <Link
-              href='/manifiesto'
+              href='#manifiesto'
               className='hover:underline'
             >
               Manifiesto
             </Link>
             <Link
-              href='/mision-vision'
+              href='#mision-Vision'
               className='hover:underline'
             >
               Misión-Visión
             </Link>
             <Link
-              href='/transparencia'
+              href='#transparencia'
               className='hover:underline'
             >
               Transparencia
             </Link>
           </div>
           <div className='my-auto flex flex-col items-center'>
-            <h3 className='font-body mb-2 text-lg font-semibold'>Síguenos</h3>
+            <h3 className='mb-2 font-body text-lg font-semibold'>Síguenos</h3>
             <div className='flex space-x-4'>
               <a
                 href='#'

@@ -32,13 +32,16 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='flex items-center justify-center bg-black px-4 py-16 text-white sm:px-6 lg:px-8'>
+    <div
+      className='flex items-center justify-center bg-black px-4 py-16 text-white sm:px-6 lg:px-8'
+      id='contacto'
+    >
       <div className='w-full max-w-md space-y-8'>
         <div>
-          <h2 className='font-headings mt-6 text-center text-3xl font-extrabold'>
+          <h2 className='mt-6 text-center font-headings text-3xl font-extrabold'>
             Contáctanos
           </h2>
-          <p className='font-body mt-2 text-center text-sm text-gray-400'>
+          <p className='mt-2 text-center font-body text-sm text-gray-400'>
             Estamos aquí para escucharte y apoyar tus proyectos culturales
           </p>
         </div>
@@ -46,7 +49,7 @@ export default function ContactForm() {
           className='mt-8 space-y-6'
           onSubmit={handleSubmit}
         >
-          <div className='font-body -space-y-px rounded-md shadow-sm'>
+          <div className='-space-y-px rounded-md font-body shadow-sm'>
             <div>
               <label
                 htmlFor='email-address'
@@ -107,7 +110,7 @@ export default function ContactForm() {
           <div>
             <Button
               type='submit'
-              className='font-body w-full bg-white text-black hover:bg-gray-200'
+              className='w-full bg-white font-body text-black hover:bg-gray-200'
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}

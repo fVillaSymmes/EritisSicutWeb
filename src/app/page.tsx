@@ -7,7 +7,10 @@ export default function HomePage() {
     <main className='bg-black'>
       <HeroSection />
 
-      <section className='mx-4 bg-black text-white sm:mx-16'>
+      <section
+        id='content'
+        className='mx-4 bg-black text-white sm:mx-16'
+      >
         <AccordionContainer />
       </section>
 

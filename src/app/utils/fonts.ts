@@ -1,18 +1,18 @@
-import { Oswald, Lato } from 'next/font/google'
+import { Libre_Baskerville, Source_Sans_3 } from 'next/font/google'
 
-const oswald_init = Oswald({
+const libre_Baskerville_init = Libre_Baskerville({
   subsets: ['latin'],
   variable: '--font-headings',
+  weight: '400',
 })
 
-const lato_init = Lato({
+const source_Sans_3_init = Source_Sans_3({
   subsets: ['latin'],
   variable: '--font-body',
-  weight: '300',
 })
 
-export const heading = oswald_init.variable
-export const body = lato_init.variable
+export const heading = libre_Baskerville_init.variable
+export const body = source_Sans_3_init.variable
 
 // Headings: Playfair Display / Body: Raleway
 

@@ -6,10 +6,10 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  { name: 'Contacto', href: '/contacto' },
-  { name: 'Manifiesto', href: '/manifiesto' },
-  { name: 'Misión-Visión', href: '/mision-vision' },
-  { name: 'Transparencia', href: '/transparencia' },
+  { name: 'Contacto', href: '#contacto' },
+  { name: 'Manifiesto', href: '#manifiesto' },
+  { name: 'Misión-Visión', href: '#mision-Vision' },
+  { name: 'Transparencia', href: '#transparencia' },
 ]
 
 export default function Navbar() {
@@ -37,7 +37,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className='font-body rounded-md px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-800'
+                  className='rounded-md px-3 py-2 font-body text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-800'
                 >
                   {item.name}
                 </Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className='font-body block rounded-md px-3 py-2 text-base font-medium transition duration-150 ease-in-out hover:bg-gray-800'
+                className='block rounded-md px-3 py-2 font-body text-base font-medium transition duration-150 ease-in-out hover:bg-gray-800'
               >
                 {item.name}
               </Link>
