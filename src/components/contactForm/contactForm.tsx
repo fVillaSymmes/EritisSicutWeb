@@ -1,35 +1,15 @@
 'use client'
 
-import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/hooks/use-toast'
+import { useServerAction } from 'zsa-react'
+import { produceNewMessage } from './action'
 
 export default function ContactForm() {
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simular envío de formulario
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    // Reiniciar formulario y mostrar mensaje de éxito
-    setEmail('')
-    setSubject('')
-    setMessage('')
-    setIsSubmitting(false)
-    toast({
-      title: 'Mensaje enviado',
-      description: 'Gracias por contactarnos. Te responderemos pronto.',
-    })
-  }
+  const { isPending, executeFormAction, isSuccess, data, isError, error } =
+    useServerAction(produceNewMessage)
 
   return (
     <div
@@ -47,7 +27,7 @@ export default function ContactForm() {
         </div>
         <form
           className='mt-8 space-y-6'
-          onSubmit={handleSubmit}
+          action={executeFormAction}
         >
           <div className='-space-y-px rounded-md font-body shadow-sm'>
             <div>
@@ -65,8 +45,6 @@ export default function ContactForm() {
                 required
                 className='bg-gray-900 text-white placeholder-gray-500'
                 placeholder='Correo electrónico'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className='mt-4'>
@@ -83,8 +61,6 @@ export default function ContactForm() {
                 required
                 className='bg-gray-900 text-white placeholder-gray-500'
                 placeholder='Asunto'
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
             <div className='mt-4'>
@@ -101,8 +77,6 @@ export default function ContactForm() {
                 required
                 className='bg-gray-900 text-white placeholder-gray-500'
                 placeholder='Tu mensaje'
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
               />
             </div>
           </div>
@@ -111,10 +85,13 @@ export default function ContactForm() {
             <Button
               type='submit'
               className='w-full bg-white font-body text-black hover:bg-gray-200'
-              disabled={isSubmitting}
+              disabled={isPending}
             >
-              {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+              {isPending ? 'Enviando...' : 'Enviar mensaje'}
             </Button>
+            {isSuccess &&
+              `Mensaje enviado exitosamente: ${JSON.stringify(data)}`}
+            {isError && `Error: ${JSON.stringify(error)}`}
           </div>
         </form>
       </div>

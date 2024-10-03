@@ -21,7 +21,10 @@
     "react-dom": "^18",
     "react-resizable-panels": "^2.1.2",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8",
+    "zsa": "^0.6.0",
+    "zsa-react": "^0.2.3"
   },
   "devDependencies": {
     "@types/node": "^20",
