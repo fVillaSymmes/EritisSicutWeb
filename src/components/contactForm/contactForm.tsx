@@ -1,44 +1,69 @@
-'use client'
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { useToast } from '@/hooks/use-toast'
 
-export default function ContactForm() {
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
+'use client';
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+import React, { FormEvent, useState } from 'react';
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
+import { Button } from '../ui/button';
 
-    // Simular envío de formulario
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitResult, setSubmitResult] = useState<string | null>(null);
 
-    // Reiniciar formulario y mostrar mensaje de éxito
-    setEmail('')
-    setSubject('')
-    setMessage('')
-    setIsSubmitting(false)
-    toast({
-      title: 'Mensaje enviado',
-      description: 'Gracias por contactarnos. Te responderemos pronto.',
-    })
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitResult(null);
+
+    const target = e.target as typeof e.target & {
+      name: { value: string };
+      email: { value: string };
+      message: { value: string };
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "925c43cd-dc82-4e15-b1cd-b248ab9beaf7",
+          name: target.name.value,
+          email: target.email.value,
+          message: target.message.value,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitResult('Form submitted successfully!');
+        // Opcional: resetear el formulario
+        // e.target.reset();
+      } else {
+        setSubmitResult('Form submission failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitResult('An error occurred. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
-    <div className='flex min-h-screen items-center justify-center bg-black px-4 text-white sm:px-6 lg:px-8'>
+    <div
+      className='flex items-center justify-center bg-black px-4 py-16 text-white sm:px-6 lg:px-8'
+      id='contacto'
+    >
       <div className='w-full max-w-md space-y-8'>
         <div>
-          <h2 className='mt-6 text-center text-3xl font-extrabold'>
+          <h2 className='mt-6 text-center font-headings text-3xl font-extrabold'>
             Contáctanos
           </h2>
-          <p className='mt-2 text-center text-sm text-gray-400'>
+          <p className='mt-2 text-center font-body text-sm text-gray-400'>
             Estamos aquí para escucharte y apoyar tus proyectos culturales
           </p>
         </div>
@@ -46,7 +71,7 @@ export default function ContactForm() {
           className='mt-8 space-y-6'
           onSubmit={handleSubmit}
         >
-          <div className='-space-y-px rounded-md shadow-sm'>
+          <div className='-space-y-px rounded-md font-body shadow-sm'>
             <div>
               <label
                 htmlFor='email-address'
@@ -62,8 +87,6 @@ export default function ContactForm() {
                 required
                 className='bg-gray-900 text-white placeholder-gray-500'
                 placeholder='Correo electrónico'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className='mt-4'>
@@ -80,8 +103,6 @@ export default function ContactForm() {
                 required
                 className='bg-gray-900 text-white placeholder-gray-500'
                 placeholder='Asunto'
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
             <div className='mt-4'>
@@ -98,8 +119,6 @@ export default function ContactForm() {
                 required
                 className='bg-gray-900 text-white placeholder-gray-500'
                 placeholder='Tu mensaje'
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
               />
             </div>
           </div>
@@ -107,14 +126,21 @@ export default function ContactForm() {
           <div>
             <Button
               type='submit'
-              className='w-full bg-white text-black hover:bg-gray-200'
+              className='w-full bg-white font-body text-black hover:bg-gray-200'
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
             </Button>
+            {submitResult &&
+              `Mensaje enviado exitosamente`}
+            
           </div>
         </form>
       </div>
     </div>
   )
+
+
+
+ 
 }
