@@ -15,7 +15,6 @@ const formInputs = z.object({
 export const produceNewMessage = createServerAction()
   .input(formInputs, { type: 'formData' })
   .handler(async ({ input }) => {
-    // your action logic here
     return {
       email: input.email,
       subject: input.subject,

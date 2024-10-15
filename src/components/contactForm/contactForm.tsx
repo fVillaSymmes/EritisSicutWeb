@@ -3,14 +3,15 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { useToast } from '@/hooks/use-toast'
+import { toast, useToast } from '@/hooks/use-toast'
 import { useServerAction } from 'zsa-react'
 import { produceNewMessage } from './action'
 
 export default function ContactForm() {
-  const { isPending, executeFormAction, isSuccess, data, isError, error } =
+  const { isPending, execute, isSuccess, data, isError, error } =
     useServerAction(produceNewMessage)
 
+  const toast = useToast()
   return (
     <div
       className='flex items-center justify-center bg-black px-4 py-16 text-white sm:px-6 lg:px-8'
@@ -27,7 +28,31 @@ export default function ContactForm() {
         </div>
         <form
           className='mt-8 space-y-6'
-          action={executeFormAction}
+          onSubmit={async (event) => {
+            event.preventDefault()
+
+            const form = event.currentTarget
+
+            const formData = new FormData(form)
+
+            const [data, err] = await execute(formData)
+
+            if (err) {
+              console.log(err)
+            } else if (data) {
+              console.log(data)
+              await fetch('/api/send', {
+                method: 'POST',
+                body: JSON.stringify({
+                  email: data.email,
+                  subject: data.subject,
+                  message: data.message,
+                }),
+              })
+            }
+
+            form.reset()
+          }}
         >
           <div className='-space-y-px rounded-md font-body shadow-sm'>
             <div>
