@@ -3,15 +3,15 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { toast, useToast } from '@/hooks/use-toast'
+import { useToast } from '@/hooks/use-toast'
 import { useServerAction } from 'zsa-react'
 import { produceNewMessage } from './action'
 
 export default function ContactForm() {
-  const { isPending, execute, isSuccess, data, isError, error } =
-    useServerAction(produceNewMessage)
+  const { isPending, execute } = useServerAction(produceNewMessage)
 
-  const toast = useToast()
+  const { toast } = useToast()
+
   return (
     <div
       className='flex items-center justify-center bg-black px-4 py-16 text-white sm:px-6 lg:px-8'
@@ -39,6 +39,12 @@ export default function ContactForm() {
 
             if (err) {
               console.log(err)
+              toast({
+                variant: 'destructive',
+                title: 'Ha ocurrido un error',
+                description:
+                  'Hubo un problema a la hora de enviar tu mensaje. Inténtalo nuevamente.',
+              })
             } else if (data) {
               console.log(data)
               await fetch('/api/send', {
@@ -48,6 +54,9 @@ export default function ContactForm() {
                   subject: data.subject,
                   message: data.message,
                 }),
+              })
+              toast({
+                description: '¡El mensaje ha sido enviado exitósamente!',
               })
             }
 
@@ -114,9 +123,6 @@ export default function ContactForm() {
             >
               {isPending ? 'Enviando...' : 'Enviar mensaje'}
             </Button>
-            {isSuccess &&
-              `Mensaje enviado exitosamente: ${JSON.stringify(data)}`}
-            {isError && `Error: ${JSON.stringify(error)}`}
           </div>
         </form>
       </div>

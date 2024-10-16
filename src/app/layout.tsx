@@ -22,8 +22,8 @@ export default function RootLayout({
       <body className={`${heading} ${body}`}>
         <Navbar />
         {children}
-        <Footer />
         <Toaster />
+        <Footer />
       </body>
     </html>
   )

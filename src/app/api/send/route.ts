@@ -8,10 +8,11 @@ export async function POST(request: Request) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['fivillasymmes@gmail.com'],
+      from: 'Acme <onboarding@resend.dev>', // Debería ser algún mail de @eritissicutdei.cl
+      to: ['fivillasymmes@gmail.com'], // Debería ser un correo de @eritissicutdei.cl
       subject: subject,
       react: EmailTemplate({
+        //sería útil agregar el campo nombre.
         email: email,
         subject: subject,
         message: message,
