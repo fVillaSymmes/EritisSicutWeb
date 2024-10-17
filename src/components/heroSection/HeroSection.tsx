@@ -30,9 +30,8 @@ export default function HeroSection() {
                 priority
                 src='/img/logo_black.png'
                 alt='Eritis Sicut Dei Logo'
-                layout='fill'
-                objectFit='contain'
-                className='animate-float'
+                fill
+                className='animate-float object-contain'
               />
             </div>
           </div>

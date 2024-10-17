@@ -23,9 +23,9 @@ export default function Navbar() {
             <div className='flex-shrink-0'>
               <Link href='/'>
                 <Image
-                  src='/img/logo_black.png'
+                  src='/img/logo_black_con_text_2.png'
                   alt='Eritis Sicut Dei Logo'
-                  width={40}
+                  width={80}
                   height={40}
                 />
               </Link>
