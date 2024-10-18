@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster'
 
 export const metadata: Metadata = {
   title: 'Eritis Sicut Dei',
+  
   //Revisar metadata con nickVayolence
   description:
     'Fundación Eritis Sicut Dei para rescate y promoción de la cultura y las artes',

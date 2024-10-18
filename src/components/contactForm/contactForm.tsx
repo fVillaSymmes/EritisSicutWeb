@@ -6,6 +6,11 @@ import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/hooks/use-toast'
 import { useServerAction } from 'zsa-react'
 import { produceNewMessage } from './action'
+import { Metadata } from 'next'
+
+export const metadata : Metadata = {
+  title: 'Contacto'
+}
 
 export default function ContactForm() {
   const { isPending, execute } = useServerAction(produceNewMessage)

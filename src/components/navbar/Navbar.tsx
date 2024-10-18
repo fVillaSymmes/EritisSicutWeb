@@ -9,7 +9,7 @@ const navItems = [
   { name: 'Contacto', href: '#contacto' },
   { name: 'Manifiesto', href: '#manifiesto' },
   { name: 'Misión-Visión', href: '#mision-Vision' },
-  { name: 'Transparencia', href: '#transparencia' },
+  { name: 'Transparencia', href: '/transparencia' },
 ]
 
 export default function Navbar() {
