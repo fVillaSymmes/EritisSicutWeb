@@ -41,7 +41,7 @@ export default function Footer() {
               Misión-Visión
             </Link>
             <Link
-              href='#transparencia'
+              href='/transparencia'
               className='hover:underline'
             >
               Transparencia

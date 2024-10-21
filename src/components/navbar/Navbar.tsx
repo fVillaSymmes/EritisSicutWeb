@@ -6,9 +6,9 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  { name: 'Contacto', href: '#contacto' },
-  { name: 'Manifiesto', href: '#manifiesto' },
-  { name: 'Misión-Visión', href: '#mision-Vision' },
+  { name: 'Contacto', href: '/#contacto' },
+  { name: 'Manifiesto', href: '/#manifiesto' },
+  { name: 'Misión-Visión', href: '/#mision-Vision' },
   { name: 'Transparencia', href: '/transparencia' },
 ]
 
