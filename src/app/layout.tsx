@@ -6,9 +6,15 @@ import { body, heading } from './utils/fonts'
 import { Toaster } from '@/components/ui/toaster'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://eritissicutdei.cl'),
+  keywords: [
+    'Eritis Sicut Dei',
+    'Fundación Eritis Sicut Dei',
+    'rescate y promoción de la cultura y las artes',
+  ],
   title: {
-    default: 'Eritis Sicut Dei',
-    template: '%s - Eritis Sicut Dei  ',
+    default: 'Fundación Eritis Sicut Dei',
+    template: '%s | Eritis Sicut Dei  ',
   },
   //Revisar metadata con nickVayolence
   description:
